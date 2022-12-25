@@ -19,5 +19,4 @@ void main()
     b=b/10;
     printf("%d",b);
     printf("%d",x);
-    Printf("fdgsdgsd");
 }
