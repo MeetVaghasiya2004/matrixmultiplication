@@ -1,0 +1,30 @@
+#include<stdio.h>
+int bin(int n);
+void main()
+
+{
+    int m=10;
+    int sum=0;
+
+    int n;
+
+    printf("\n enter a number");
+    scanf("%d",&n);
+    printf("\n");
+
+    sum=bin(n);
+    printf("%8d",sum/10);
+}
+
+int bin (int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return ((n%2)+bin(n/2))*10;
+    }
+
+}
