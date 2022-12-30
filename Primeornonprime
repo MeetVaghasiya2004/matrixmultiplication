@@ -1,0 +1,35 @@
+#include<stdio.h>
+int isprime (int n)
+{
+    int count;
+    for(int i=1;i<n;i++)
+        {
+            if(n%i == 0)
+            {
+                count++;
+            }
+        }
+        return count;
+
+
+    }
+int main()
+{
+    int n;
+    printf("enter your number in pos");
+    scanf("%d",&n);
+    int a=isprime(n);
+
+
+    if(a>2)
+    {
+        printf("is a  non prime number");
+    }
+    else
+    {
+        printf("is a non prime number");
+    }
+
+
+
+}
