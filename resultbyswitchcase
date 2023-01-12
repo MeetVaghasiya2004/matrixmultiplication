@@ -1,0 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+    int a,i;
+    printf("enter marks : ");
+    scanf("%d",&a);
+    printf("100-80 enter : 1\n79-67 enter : 2\n66-60 enter : 3\n59-50 enter : 4\n49-40 enter : 5\n39-0 enter : 6\n");
+    printf("enter : ");
+    scanf("%d",&i);
+    switch(i)
+    {
+        case 1:
+        printf("honour");
+        break;
+         case 2:
+        printf("distinction");
+        break;
+        case 3:
+        printf("first class");
+        break;
+        case 4:
+        printf("sc. class");
+        break;
+        case 5:
+        printf("pass");
+        break;
+        case 6:
+        printf("fail");
+    }
+}
