@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include<string.h>
+int main() 
+{
+    char s[15];
+    strcpy(s,"abcd");
+    printf("%d %d ",strlen(s),sizeof(s));
+}
