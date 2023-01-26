@@ -1,0 +1,17 @@
+#include <stdio.h>
+void main(int argc,char **argv)
+{
+    FILE *s1;
+    char ch;
+    int size=0;
+    s1=fopen(argv[1],"r");
+    if(s1==EOF)
+        printf("not open");
+    else
+        printf("file open");
+    fseek(s1,0,2);
+    size=ftell(s1);
+    printf("size of giben file is %d \n" ,size );
+    fclose(s1);
+}
+
