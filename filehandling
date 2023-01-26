@@ -1,0 +1,26 @@
+#include <stdio.h>
+void main()
+{
+    FILE *s1,*s2,*s3;
+    char ch,a[20],b[20],c[20];
+    s1=fopen("t1.txt","r");
+    s2=fopen("t2.txt","r");
+    if(s1==NULL || s2==NULL )
+    {
+        printf("press any key to exit");
+        exit(0);
+    }
+    s3=fopen("t3.txt","w");
+    if(s3==NULL)
+    {
+        printf("press any key to exit");
+        exit(0);
+    }
+    while((ch=fgetc(s1))!=EOF)
+        fputc(ch,c);
+    while((ch=fgetc(s2))!=EOF)
+        fputc(ch,c);
+    fclose(s1);
+    fclose(s2);
+    fclose(s3);
+}
