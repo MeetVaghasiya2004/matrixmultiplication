@@ -1,0 +1,13 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int sum(int a,int b)
+{
+    int c=a+b;
+    return c;
+}
+int main()
+{
+   int a=10,b=20;
+   cout<<sum(a,b);
+}
