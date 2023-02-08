@@ -1,0 +1,37 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class jam
+{
+    private:
+    int a;
+    int b;
+    public:
+    void setdata(int va,int vb)
+    {
+        a=va;
+        b=vb;
+    }
+    void sdata( jam ga,jam gb)
+    {
+        a=ga.a+gb.a;
+        b=ga.b+gb.b;
+    }
+    void pnum()
+    {
+        cout<<"yor num is : "<<a<<"+i"<<b<<endl;
+    }
+};
+int main()
+{
+    jam j1,j2,j3;
+    int x,y,z,w;
+    cout<<"enter : "<<"x,"<<"y,"<<"z,"<<"w"<<endl;
+    cin>>x>>y>>z>>w;
+    j1.setdata(x,y);
+    j1.pnum();
+    j2.setdata(z,w);
+    j2.pnum();
+    j3.sdata(j1,j2);
+    j3.pnum();
+}
