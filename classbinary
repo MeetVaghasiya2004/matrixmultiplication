@@ -1,0 +1,61 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class bin
+{
+private:
+    string a;
+public:
+    void binary(void);
+    void cheakbin(void);
+    void changebin(void);
+    void disbin(void);
+
+
+};
+void bin :: binary(void)
+{
+    cout<<"enter binary num : ";
+    cin>>a;
+}
+void bin :: cheakbin(void)
+{
+    for(int i=0;i<a.length();i++)
+    {
+        if(a.at(i)!='0' && a.at(i)!='1')
+        {
+            cout<<"proper not binary "<<endl;
+            exit(0);
+        }
+    }
+}
+void bin :: changebin (void)
+{
+    for(int i=0;i<a.length();i++)
+    {
+        if(a.at(i)=='0')
+        {
+            a.at(i)='1';
+        }
+        else
+        {
+            a.at(i)='0';
+        }
+    }
+}
+void bin :: disbin(void)
+{
+    cout<<"changesin binary format if binary is correct in 0 ar 1 form : "<<endl;
+    for(int i=0;i<a.length();i++)
+    {
+        cout<<a.at(i);
+    }
+}
+int main()
+{
+    bin b1;
+    b1.binary();
+    b1.cheakbin();
+    b1.changebin();
+    b1.disbin();
+}
