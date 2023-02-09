@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class mark
+{
+private:
+    int a,b;
+public:
+    int c,d;
+    void marka(int a1,int b1);
+    void markb()
+    {
+        cout<<a<<endl;
+        cout<<b<<endl;
+        cout<<c<<endl;
+        cout<<d<<endl;
+    }
+};
+void mark :: marka(int a1,int b1)
+{
+    a=a1;
+    b=b1;
+}
+int main()
+{
+    mark m1;
+    m1.c=78;
+    m1.d=87;
+    m1.marka(23,24);
+    m1.markb();
+    return 0;
+}
