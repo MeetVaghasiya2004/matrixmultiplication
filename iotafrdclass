@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+class emp
+{
+private:
+    int a,b;
+public:
+    void val(int va,int vb)
+    {
+        a=va;
+        b=vb;
+    }
+    friend emp sum(emp e1,emp e2);
+    void print()
+    {
+         cout<<"sum of a and b : "<<a<<"+i"<<b<<endl;
+    }
+};
+
+emp sum(emp e1,emp e2)
+{
+    emp e3;
+    e3.val((e1.a+e2.a),(e1.b+e2.b));
+    return e3;
+}
+int main()
+{
+    emp e1,e2,e3;
+    int x,y,z,w;
+    cout<<"enter val of x,y,z,w"<<endl;
+    cin>>x>>y>>z>>w;
+    e1.val(x,y);
+    e1.print();
+
+    e2.val(z,w);
+    e2.print();
+
+    e3=sum(e1,e2);
+    e3.print();
+    return 0;
+}
