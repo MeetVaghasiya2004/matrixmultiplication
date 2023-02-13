@@ -1,0 +1,10 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    cout<<1<<setw(3)<<2<<setw(3)<<3<<setw(3)<<4<<setw(3)<<endl;
+    cout<<5<<setw(3)<<6<<setw(3)<<7<<setw(3)<<8<<setw(3)<<endl;
+    cout<<9<<setw(3)<<10<<setw(3)<<11<<setw(3)<<12<<setw(3)<<endl;
+    cout<<13<<setw(3)<<14<<setw(3)<<15<<setw(3)<<16<<setw(3)<<endl;
+}
