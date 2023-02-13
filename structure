@@ -1,0 +1,28 @@
+#include <iomanip>
+#include <ios>
+#include <iostream>
+using namespace std;
+struct student
+{
+    char college_name[10];
+    char college_code[10];
+    char deparment[5];
+    int intake;
+};
+int main()
+{
+    struct student s1;
+    cout<<"collage name : "<<endl;
+    cin>>s1.college_name;
+    cout<<"collage code : "<<endl;
+    cin>>s1.college_code;
+    cout<<"department : "<<endl;
+    cin>>s1.deparment;
+    cout<<"enter intake : "<<endl;
+    cin>>s1.intake;
+
+    cout<<s1.college_name<<endl;
+    cout<<s1.college_code<<endl;
+    cout<<s1.deparment<<endl;
+    cout<<s1.intake<<endl;
+}
