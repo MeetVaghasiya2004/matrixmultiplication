@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class maths
+{
+public:
+    void maxi(int *a,int *b)
+    {
+        if(*a>*b)
+        {
+            cout<<"a is max"<<endl;
+        }
+        else
+        {
+            cout<<"b is max"<<endl;
+        }
+    }
+};
+
+int main()
+{
+    maths m1;
+    int a,b;
+    cout<<"eter a : "<<endl;
+    cin>>a;
+    cout<<"eter b : "<<endl;
+    cin>>b;
+    m1.maxi(&a,&b);
+}
