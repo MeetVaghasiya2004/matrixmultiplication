@@ -1,0 +1,32 @@
+let a = prompt("Enter s , w and g")
+let b = Math.floor(Math.random()*3)
+let c = ["s" , "w" , "g"][b]
+
+const match = (c , a) => {
+    if(c === a)
+    {
+        return "match is tie "
+    }
+    else if(a === "s" && c==="w")
+    {
+        return "a"
+    }
+    else if(a === "s" && c==="g")
+    {
+        return "c"
+    }
+    else if(a === "g" && c==="w")
+    {
+        return "a"
+    }
+    else if(a === "w" && c==="g")
+    {
+        return "c"
+    }
+    else if(a === "w" && c==="s")
+    {
+        return "a"
+    }    
+}
+let res = match(c,a)
+document.write(`A : ${a} <br> C : ${c} <br> winner is : ${res.toUpperCase()} `)
