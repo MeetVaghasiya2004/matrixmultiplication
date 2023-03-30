@@ -1,0 +1,26 @@
+const express = require('express')
+const path = require('path')
+const app = express();
+const publicpath = path.join(__dirname , 'NODE')
+
+app.set("view engine" , 'ejs')
+
+app.get('/profile' , (__ , resp) => {
+    const user =  {
+        name : 'Anil sidhu',
+        email : 'amilsidhu@gmail.com',
+        city : 'surat'
+    }
+    resp.render('profile' , {user})
+})
+app.get('/about' , (__ , resp) => {
+    resp.sendFile(`${publicpath}/about.html`)
+})
+app.get('/help' , (__ , resp) => {
+    resp.sendFile(`${publicpath}/help.html`)
+})
+app.get('*' , (__ , resp) => {
+    resp.sendFile(`${publicpath}/try.html`)
+})
+
+app.listen(4500)
