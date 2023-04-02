@@ -1,0 +1,27 @@
+const express = require('express')
+const filt = require('filt')
+const app = express();
+const route = express.route();
+
+
+// app.use(filt)
+
+app.get('/' , filt,(a,b) =>{
+    b.send('my nsme is meet ')
+})
+
+app.get('/user' , filt, (a,b) => {
+    b.send('welcome user')
+})
+app.get('/meet' , (a,b) => {
+    b.send('welcome meet')
+})
+route.get('/ronak' , (a,b) => {
+    b.send('welcome ronak')
+})
+route .get('/milan' , (a,b) => {
+    b.send('welcome milan')
+})
+
+app.listen(4500)
+
