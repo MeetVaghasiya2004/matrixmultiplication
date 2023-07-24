@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+void beforeinsertion(int a[] , int size){
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ",a[i]);
+    }
+}
+void instarr(int a[] , int size ,int index ,int element){
+    for (int i = index; i<=size ; i++)
+    {
+        a[i]=a[i+1];
+    }
+}
+void print(int a[],int size){
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ",a[i]);
+    }
+}
+int main(){
+    int arr[100]={10,20,0,4,1,3,5,4,7};
+    int size = 9;
+    // printf("%d\n",size);
+    printf("before insertion array is : \n");
+    beforeinsertion(arr , size);
+    instarr(arr,size , 4 ,54);
+    printf("\nafter deletion element : \n");
+            size-=1;
+    print(arr,size);
+    size = sizeof(arr)/sizeof(int);
+    printf("\n%d\n",size);
+}
