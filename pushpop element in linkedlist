@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<iostream>
+using namespace std;
+struct Node{
+    int data;
+    struct Node *next;
+};
+int is_empty(struct Node *top){
+    if(top == NULL){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+int is_full(struct Node *top){
+    struct Node *k = (struct Node *) malloc(sizeof(struct Node));
+    if(k == NULL){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+struct Node *push(struct Node *top , int x){
+    if(is_full(top)){
+        printf("can't push");
+    }else{
+        struct Node *n = (struct Node * )malloc(sizeof(struct Node));
+        n->data = x;
+        n->next = top;
+        top = n;
+        return top;
+    }
+}
+int pop(struct Node **top){
+    if(is_full((*top))){
+        printf("can't pop");
+    }
+    else{
+        struct Node *n = (*top);
+        (*top) = (*top)->next;
+        int x = n->data;
+        free(n);
+        return x;
+    }
+}
+void travel ( struct Node *p ){
+    while (p != NULL){
+        cout<<" "<< p->data<<endl;
+        p=p->next;
+    }
+
+}
+int main(){
+    struct Node* top = NULL;
+    top = push(top , 5);
+    top = push(top , 25);
+    top = push(top , 15);
+    top = push(top , 35);
+    top = push(top , 45);
+    top = push(top , 56);
+    top = push(top, 2);
+    int i = pop(&top);
+    printf("%d : is poping element\n",i);
+    travel (top);
+}
