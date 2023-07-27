@@ -1,0 +1,21 @@
+package menage;
+
+class circle{
+    double pi =3.14;
+    int redius;
+    void setr(int r){
+        redius = r;
+    }
+    double cala(){
+        return pi*redius*redius;
+    }
+}
+public class area {
+    public static void main(String[] args) {
+        double area;
+        circle c1 = new circle();
+        c1.setr(5);
+       double x = c1.cala();
+        System.out.println("area is : "+x);
+    }
+}
