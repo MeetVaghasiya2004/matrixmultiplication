@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<iostream>
+using namespace std;
+struct Node{
+    int data;
+    struct Node *next;
+};
+
+struct Node * insert(struct Node *head , int index , int value){
+    struct Node *p = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *ptr =head; 
+    int count = 0;
+    while(count !=index-1){
+        p = p->next;
+        count++;
+    }
+    p->data=value;
+    p->next = ptr->next;
+    ptr->next = p;
+}
+void travel(struct Node *p){
+    while(p != NULL){
+        cout<<" "<<p->data<<endl;
+        p = p->next;
+    }
+}
+int main(){
+    struct Node *head;
+    struct Node *sec;
+    struct Node *third;
+    struct Node *four;
+    
+    head = (struct Node *)malloc(sizeof(struct Node));
+    sec = (struct Node *)malloc(sizeof(struct Node));
+    third = (struct Node *)malloc(sizeof(struct Node));
+    four= (struct Node *)malloc(sizeof(struct Node));
+    struct Node *p = head;
+
+    head->data = 7;
+    head->next = sec;
+
+    sec->data = 3;
+    sec->next = third;
+
+    third->data = 4;
+    third->next = four;
+
+    four->data = 1;
+    four->next = NULL;
+    
+    travel(head);
+    cout <<"next: " << endl;
+    insert(head,1,35);
+    travel(head);
+}
