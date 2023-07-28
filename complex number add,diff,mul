@@ -1,0 +1,45 @@
+public class cal {
+    int a;
+    int b;
+     cal(int r , int i){
+        this.a=r;
+        this.b=i;
+    }
+    void show(){
+        System.out.println(a+ " + i"+b);
+    }
+     public static cal add(cal ca , cal cb){
+        cal c = new cal(0,0);
+        c.a = ca.a + cb.a;
+        c.b = ca.b + cb.b;
+        return c;
+    }
+    public static cal diff (cal ca , cal cb){
+        cal c = new cal(0,0);
+        c.a = ca.a - cb.a;
+        c.b = ca.b - cb.b;
+        return c;
+    }
+    public static cal mul (cal ca , cal cb){
+        cal c = new cal(0,0);
+        c.a = ((ca.a * cb.a)-(ca.b * cb.b));
+        c.b = (ca.b * cb.a)+((ca.a * cb.b));
+        return c;
+    }
+    public static void main(String[] args) {
+        cal c1 = new cal(4,5);
+        cal c2 = new cal(2,3);
+        c1.show();
+        c2.show();
+        cal c = add(c1,c2);
+        System.out.println("addition : ");
+        c.show();
+        cal cx = diff(c1,c2);
+        System.out.println("sub : ");
+        cx.show();
+        cal cy = mul(c1,c2);
+        System.out.println("mul : ");
+        cy.show();
+    }
+}
+
