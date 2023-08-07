@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+void print(int *a , int n){
+    for (int i = 0; i < n; i++) 
+    {
+        printf("%d ",a[i]);
+    }
+    
+}
+
+void bubble(int *a, int n){
+    int temp;
+    for(int i=0;i<n;i++)
+    {
+       
+        for (int j = i+1; j < n; j++)
+        {
+            if(a[j]<a[i]){
+                temp = a[j];
+                a[j] = a[i];
+                a[i] = temp;
+            }
+        }
+    }
+}
+int main()
+{
+    int a[6]= {0 ,6, 3 ,2 ,5, 9};
+    int n=6;
+    print(a,6);
+    bubble(a,6);
+     printf("\n");
+     print(a,6);
+
+}
