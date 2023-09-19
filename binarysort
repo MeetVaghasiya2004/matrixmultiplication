@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+void print(int arr[] , int n){
+    for(int i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+}
+int main(){
+    int a[] = {1,1,0,0,1,0,1,0};
+    int n=8 ,temp;
+    int j = n-1;
+    int i = 0;
+    while (i<j){
+        while(a[i]==0 && i<j){
+            i++;
+        }
+        while(a[j]==1 && i<j){
+            j--;
+        }
+        temp = a[j];
+        a[j] = a[i];
+        a[i] = temp;
+        i++;
+        j--;
+    }
+    print(a , n );
+}
